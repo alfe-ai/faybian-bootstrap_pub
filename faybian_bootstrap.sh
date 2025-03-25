@@ -5,7 +5,10 @@
 # Check if the user doesn't already exist in /etc/sudoers
 if ! sudo grep -q "$USER ALL=(ALL:ALL) ALL" /etc/sudoers; then
   # Grant the user sudo access
+  echo "Adding $USER to /etc/sudoers"
   echo "$USER ALL=(ALL:ALL) ALL" | sudo EDITOR='tee -a' visudo
+else
+  echo "$USER already exists in /etc/sudoers"
 fi
 
 # Overwrite /etc/apt/sources.list with the file from the repository
