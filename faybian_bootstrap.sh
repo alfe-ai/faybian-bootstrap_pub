@@ -24,7 +24,7 @@ fi
 print_section_header "Overwriting /etc/apt/sources.list"
 
 # Overwrite /etc/apt/sources.list with the file from the repository
-sudo wget --header="Cache-Control: no-cache" --header="Pragma: no-cache" -O /etc/apt/sources.list "https://raw.githubusercontent.com/alfe-ai/faybian-bootstrap_pub/refs/heads/main/fileSystem/etc/apt/sources.list?$(date +%s)"
+sudo wget --header="Cache-Control: no-cache" --header="Pragma: no-cache" -O /etc/apt/sources.list "https://raw.githubusercontent.com/alfe-ai/faybian-bootstrap_pub/refs/heads/main/fileSystem/etc/apt/sources.list?$(date +%s)" #TODO: sha/pgp verification
 
 print_section_header "Updating and upgrading packages"
 
@@ -45,3 +45,7 @@ fi
 
 print_section_header "Install required packages"
 sudo apt install redshift -y
+
+print_section_header "Download and install ALSH"
+sudo wget --header="Cache-Control: no-cache" --header="Pragma: no-cache" -O /home/$USER/.bashrc "https://raw.githubusercontent.com/alfe-ai/faybian-scripts/refs/heads/main/filesystemRoot/home/user/bashrc?$(date +%s)" #TODO: sha/pgp verification
+
