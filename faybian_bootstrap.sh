@@ -15,6 +15,9 @@ print_section_header "List of sha256sums"
 sha256sum_list=(
   "d29bd8f048dcda31e8c46f051b09e79cde5d064c48400d37cd4515e71d9cf00d  /tmp/dash-to-panel.zip"
   "d29bd8f048dcda31e8c46f051b09e79cde5d064c48400d37cd4515e71d9cf00d  https://extensions.gnome.org/extension-data/dash-to-paneljderose9.github.com.v68.shell-extension.zip"
+  "4d14a6e42c22ff3d6bee1df33095bf2944c3df9b96e5b20e4024d3b0a0e4c0ea  config/dash-to-panel-config.txt"
+  "38d70e671c6bc1ee8af97fdbd5174dbb42457880835ead7dc933abb60fa00c0e  utils/install_gnome_extension_dash_to_panel.sh"
+  "8cc1d2461c3d85ca41483a6f128842369c4e9ebbb3d236d9464941554b22755a  utils/install_openssh_server.sh"
 )
 
 for item in "${sha256sum_list[@]}"; do
