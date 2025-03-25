@@ -1,5 +1,11 @@
 # Faybian / Bootstrap_pub
-Faybian / Bootstrap_pub: A FLOSS Project
+Faybian / Bootstrap_pub: A FLOSS Project which modifies a fresh install of Debian 13 Testing, to add Faybian OS features and customizations.
+
+---
+### Prerequisite
+- A fresh installation of Debian 13 Testing (amd64)
+  - Can be obtained from: https://www.debian.org/devel/debian-installer/  
+  - Weekly ISO is suggested: https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-dvd/
 
 ---
 ### Usage
