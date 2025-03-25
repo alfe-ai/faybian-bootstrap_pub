@@ -11,8 +11,15 @@ print_section_header() {
 }
 
 print_section_header "List of sha256sums"
-echo "d29bd8f048dcda31e8c46f051b09e79cde5d064c48400d37cd4515e71d9cf00d /tmp/dash-to-panel.zip"
-echo "d29bd8f048dcda31e8c46f051b09e79cde5d064c48400d37cd4515e71d9cf00d https://extensions.gnome.org/extension-data/dash-to-paneljderose9.github.com.v68.shell-extension.zip"
+
+sha256sum_list=(
+  "d29bd8f048dcda31e8c46f051b09e79cde5d064c48400d37cd4515e71d9cf00d  /tmp/dash-to-panel.zip"
+  "d29bd8f048dcda31e8c46f051b09e79cde5d064c48400d37cd4515e71d9cf00d  https://extensions.gnome.org/extension-data/dash-to-paneljderose9.github.com.v68.shell-extension.zip"
+)
+
+for item in "${sha256sum_list[@]}"; do
+  echo "$item"
+done
 
 print_section_header "Checking sudo access for $USER"
 
@@ -33,7 +40,6 @@ sudo apt update -y && sudo apt upgrade -y
 print_section_header "Creating directory: ~/.alfe.sh and subdirectories."
 mkdir /home/$USER/.alfe.sh
 mkdir /home/$USER/.alfe.sh/git
-#/home/user/.alfe.sh/FaybianScripts/utils/textc.sh
 mkdir /home/$USER/.alfe.sh/FaybianScripts
 mkdir /home/$USER/.alfe.sh/FaybianScripts/utils
 

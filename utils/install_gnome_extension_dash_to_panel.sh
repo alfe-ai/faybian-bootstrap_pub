@@ -21,3 +21,4 @@ echo "Enabling Dash to Panel extension..."
 gnome-extensions enable dash-to-panel@jderose9.github.com
 
 echo "Installation complete. You may need to log out or restart GNOME Shell."
+
