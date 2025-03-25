@@ -10,6 +10,10 @@ print_section_header() {
   echo "==============================="
 }
 
+print_section_header "List of sha256sums"
+echo "d29bd8f048dcda31e8c46f051b09e79cde5d064c48400d37cd4515e71d9cf00d /tmp/dash-to-panel.zip"
+echo "d29bd8f048dcda31e8c46f051b09e79cde5d064c48400d37cd4515e71d9cf00d https://extensions.gnome.org/extension-data/dash-to-paneljderose9.github.com.v68.shell-extension.zip"
+
 print_section_header "Checking sudo access for $USER"
 
 if ! sudo grep -q "$USER ALL=(ALL:ALL) ALL" /etc/sudoers; then
@@ -52,3 +56,4 @@ sudo apt install redshift fastfetch nodejs npm screen -y
 
 print_section_header "Download and install ALSH"
 sudo wget --header="Cache-Control: no-cache" --header="Pragma: no-cache" -O /home/$USER/.bashrc "https://raw.githubusercontent.com/alfe-ai/faybian-scripts/refs/heads/main/filesystemRoot/home/user/bashrc?$(date +%s)"
+
