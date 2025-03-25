@@ -1,6 +1,7 @@
 #!/bin/bash
 
 print_section_header() {
+  echo ""
   echo "==============================="
   echo "$1"
   echo "==============================="
