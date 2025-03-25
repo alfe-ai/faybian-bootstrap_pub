@@ -13,10 +13,10 @@ print_section_header "Checking sudo access for $USER"
 # Check if the user doesn't already exist in /etc/sudoers
 if ! sudo grep -q "$USER ALL=(ALL:ALL) ALL" /etc/sudoers; then
   # Grant the user sudo access
-  print_section_header "Adding $USER to /etc/sudoers"
+  echo "Adding $USER to /etc/sudoers"
   echo "$USER ALL=(ALL:ALL) ALL" | sudo EDITOR='tee -a' visudo
 else
-  print_section_header "$USER already exists in /etc/sudoers"
+  echo "$USER already exists in /etc/sudoers"
 fi
 
 print_section_header "Overwriting /etc/apt/sources.list"
