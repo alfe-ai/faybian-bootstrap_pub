@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # TODO: Have the script increase display resolution and enable Gnome Dark Style
+# TODO: sha/pgp verification for downloaded files.
 
 print_section_header() {
   echo ""
