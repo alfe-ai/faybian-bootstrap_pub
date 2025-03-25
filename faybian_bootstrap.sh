@@ -45,6 +45,7 @@ sudo wget --header="Cache-Control: no-cache" --header="Pragma: no-cache" -O /hom
 
 print_section_header "Set permissions for ~/.alfe.sh and subdirectories to $USER"
 sudo chown -R $USER:$USER /home/$USER/.alfe.sh
+sudo chmod -R 700 /home/$USER/.alfe.sh
 
 print_section_header "Install required packages"
 sudo apt install redshift fastfetch nodejs npm -y
