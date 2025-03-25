@@ -9,8 +9,6 @@ print_section_header() {
 
 # TODO: Have the script increase display resolution and enable Gnome Dark Style
 
-
-
 # Stage 1: Init
 print_section_header "Checking sudo access for $USER"
 
@@ -33,11 +31,8 @@ print_section_header "Updating and upgrading packages"
 # Upgrade packages with default Yes to the prompt
 sudo apt update -y && sudo apt upgrade -y
 
-
-
 # Stage 2: ALSH
 print_section_header "Creating directory: ~/.alfe.sh and subdirectories."
-mkdir ~/.alfe.sh
-mkdir ~/.alfe.sh/git
-
+mkdir /home/$USER/.alfe.sh
+mkdir /home/$USER/.alfe.sh/git
 
