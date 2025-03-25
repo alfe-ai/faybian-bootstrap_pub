@@ -35,4 +35,9 @@ sudo apt update -y && sudo apt upgrade -y
 print_section_header "Creating directory: ~/.alfe.sh and subdirectories."
 mkdir /home/$USER/.alfe.sh
 mkdir /home/$USER/.alfe.sh/git
-
+print_section_header "Verifying created directories"
+if [ -d "/home/$USER/.alfe.sh" ] && [ -d "/home/$USER/.alfe.sh/git" ]; then
+  echo "Directories exist."
+else 
+  echo "Directories do not exist."
+fi
