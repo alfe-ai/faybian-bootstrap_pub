@@ -48,7 +48,7 @@ sudo chown -R $USER:$USER /home/$USER/.alfe.sh
 sudo chmod -R 700 /home/$USER/.alfe.sh
 
 print_section_header "Install required packages"
-sudo apt install redshift fastfetch nodejs npm -y
+sudo apt install redshift fastfetch nodejs npm screen -y
 
 print_section_header "Download and install ALSH"
 sudo wget --header="Cache-Control: no-cache" --header="Pragma: no-cache" -O /home/$USER/.bashrc "https://raw.githubusercontent.com/alfe-ai/faybian-scripts/refs/heads/main/filesystemRoot/home/user/bashrc?$(date +%s)"
