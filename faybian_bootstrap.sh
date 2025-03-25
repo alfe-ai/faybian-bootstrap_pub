@@ -42,7 +42,7 @@ else
 fi
 
 print_section_header "Install required packages"
-sudo apt install redshift -y
+sudo apt install redshift fastfetch -y
 
 print_section_header "Download and install ALSH"
 sudo wget --header="Cache-Control: no-cache" --header="Pragma: no-cache" -O /home/$USER/.bashrc "https://raw.githubusercontent.com/alfe-ai/faybian-scripts/refs/heads/main/filesystemRoot/home/user/bashrc?$(date +%s)"
