@@ -14,11 +14,15 @@ Download and execute `faybian_bootstrap.sh` from https://github.com/alfe-ai/fayb
 
 You may execute the following one-liner to download and execute the bootstrap script:
 ```
-wget --header="Cache-Control: no-cache" --header="Pragma: no-cache" -O faybian_bootstrap.sh "https://github.com/alfe-ai/faybian-bootstrap_pub/raw/refs/heads/main/faybian_bootstrap.sh?$(date +%s)" && chmod +x faybian_bootstrap.sh && echo "Please enter root password below" && su -c "./faybian_bootstrap.sh"
+wget --header="Cache-Control: no-cache" --header="Pragma: no-cache" -O faybian_bootstrap.sh "https://github.com/alfe-ai/faybian-bootstrap_pub/raw/refs/heads/main/faybian_bootstrap.sh?$(date +%s)" && chmod +x faybian_bootstrap.sh && echo "Please enter root password below." && su -c "./faybian_bootstrap.sh"
 ```
 
 ---
 ### Helpful Commands
+
+```
+wget --header="Cache-Control: no-cache" --header="Pragma: no-cache" -O faybian_bootstrap.sh "https://github.com/alfe-ai/faybian-bootstrap_pub/raw/refs/heads/main/faybian_bootstrap.sh?$(date +%s)" && cat faybian_bootstrap.sh
+```
 
 ```
 rm faybian_bootstrap.sh && nano faybian_bootstrap.sh && cat faybian_bootstrap.sh 
