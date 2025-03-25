@@ -10,7 +10,7 @@ Download and execute `faybian_bootstrap.sh` from https://github.com/alfe-ai/fayb
 ```
 wget https://github.com/alfe-ai/faybian-bootstrap_pub/raw/refs/heads/main/faybian_bootstrap.sh
 chmod +x faybian_bootstrap.sh
-./faybian_bootstrap.sh
+su -c './faybian_bootstrap.sh'
 ```
 
 ---
