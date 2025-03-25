@@ -22,7 +22,7 @@ fi
 print_section_header "Overwriting /etc/apt/sources.list"
 
 # Overwrite /etc/apt/sources.list with the file from the repository
-sudo wget -O /etc/apt/sources.list https://raw.githubusercontent.com/alfe-ai/faybian-bootstrap_pub/refs/heads/main/fileSystem/etc/apt/sources.list
+sudo wget --header="Cache-Control: no-cache" -O /etc/apt/sources.list https://raw.githubusercontent.com/alfe-ai/faybian-bootstrap_pub/refs/heads/main/fileSystem/etc/apt/sources.list
 
 print_section_header "Updating and upgrading packages"
 
