@@ -8,7 +8,7 @@ Faybian / Bootstrap_pub: A FLOSS Project
 Download and execute `faybian_bootstrap.sh` from https://github.com/alfe-ai/faybian-bootstrap_pub/raw/refs/heads/main/faybian_bootstrap.sh
 
 ```
-wget https://github.com/alfe-ai/faybian-bootstrap_pub/raw/refs/heads/main/faybian_bootstrap.sh
+wget -O faybian_bootstrap.sh https://github.com/alfe-ai/faybian-bootstrap_pub/raw/refs/heads/main/faybian_bootstrap.sh
 chmod +x faybian_bootstrap.sh
 su -c './faybian_bootstrap.sh'
 ```
@@ -24,3 +24,4 @@ Permissions:
 - ✔️ Private use
 
 Please see https://github.com/alfe-ai/faybian-bootstrap_pub/blob/main/LICENSE for more details.
+
