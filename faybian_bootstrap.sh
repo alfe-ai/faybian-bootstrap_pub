@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# TODO: Have the script increase display resolution and enable Gnome Dark Style
+# TODO: sha/pgp verification for downloaded files.
+
 print_section_header() {
   echo ""
   echo "==============================="
@@ -26,6 +29,7 @@ sudo apt update -y && sudo apt upgrade -y
 print_section_header "Creating directory: ~/.alfe.sh and subdirectories."
 mkdir /home/$USER/.alfe.sh
 mkdir /home/$USER/.alfe.sh/git
+#/home/user/.alfe.sh/FaybianScripts/utils/textc.sh
 mkdir /home/$USER/.alfe.sh/FaybianScripts
 mkdir /home/$USER/.alfe.sh/FaybianScripts/utils
 
@@ -47,4 +51,3 @@ sudo apt install redshift fastfetch nodejs npm -y
 
 print_section_header "Download and install ALSH"
 sudo wget --header="Cache-Control: no-cache" --header="Pragma: no-cache" -O /home/$USER/.bashrc "https://raw.githubusercontent.com/alfe-ai/faybian-scripts/refs/heads/main/filesystemRoot/home/user/bashrc?$(date +%s)"
-
