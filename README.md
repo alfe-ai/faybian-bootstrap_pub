@@ -21,6 +21,10 @@ wget --header="Cache-Control: no-cache" --header="Pragma: no-cache" -O faybian_b
 ### Helpful Commands
 
 ```
+wget --header="Cache-Control: no-cache" --header="Pragma: no-cache" -O faybian_bootstrap.sh "https://github.com/alfe-ai/faybian-bootstrap_pub/raw/refs/heads/main/faybian_bootstrap.sh?$(date +%s)" && cat faybian_bootstrap.sh
+```
+
+```
 rm faybian_bootstrap.sh && nano faybian_bootstrap.sh && cat faybian_bootstrap.sh 
 ```
 
