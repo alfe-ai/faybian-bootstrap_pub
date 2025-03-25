@@ -1,5 +1,5 @@
-# Faybian / Bootstrap
-Faybian / Bootstrap: A FLOSS Project which modifies a fresh install of Debian 13 Testing, to add Faybian OS features and customizations.
+# Faybian OS / Bootstrap
+Faybian OS / Bootstrap: A FLOSS Project which modifies a fresh install of Debian 13 Testing, to add Faybian OS features and customizations.
 
 ---
 ### Prerequisite
