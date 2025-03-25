@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: Have the script increase display resolution and enable Gnome Dark Style
+
 print_section_header() {
   echo ""
   echo "==============================="
