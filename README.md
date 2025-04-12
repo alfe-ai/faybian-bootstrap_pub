@@ -33,6 +33,11 @@ chmod +x faybian_bootstrap.sh && su -c "./faybian_bootstrap.sh"
 ```
 
 ---
+### Todo
+
+https://extensions.gnome.org/extension/1160/dash-to-panel/
+
+---
 ### License
 
 Licensed under Creative Commons Zero v1.0 Universal License  
@@ -43,5 +48,4 @@ Permissions:
 - ✔️ Private use
 
 Please see https://github.com/alfe-ai/faybian-bootstrap/blob/main/LICENSE for more details.
-
 
