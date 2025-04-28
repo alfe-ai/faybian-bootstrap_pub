@@ -1,22 +1,40 @@
 #!/bin/bash
-
+#
 # bashrc_symlink.sh
-# Creates a symbolic link $HOME/bashrc -> $HOME/.bashrc.
-# If $HOME/bashrc exists as a regular file (or any other type),
-# it is removed prior to creating the symlink.
+# Make $HOME/bashrc a symbolic link to $HOME/.bashrc.
+# 1. Remove any existing $HOME/bashrc (file / dir / link).
+# 2. Create the new symlink.
+# 3. Print verbose debug information.
+#
 
-SOURCE_BASHRC="$HOME/.bashrc"
-DEST_BASHRC="$HOME/bashrc"
+set -euo pipefail
 
-# Ensure the parent directory exists (usually $HOME, but keep generic).
-mkdir -p "$(dirname "$DEST_BASHRC")"
+# Resolve home directory robustly
+HOME_DIR="${HOME:?Could not detect \$HOME}"
 
-# Remove any existing file, link, or directory at the destination.
-if [ -e "$DEST_BASHRC" ] || [ -L "$DEST_BASHRC" ]; then
-    echo "Removing existing destination: $DEST_BASHRC"
-    rm -rf "$DEST_BASHRC"
+SRC="${HOME_DIR}/.bashrc"
+DEST="${HOME_DIR}/bashrc"
+
+echo "[bashrc_symlink] HOME directory: ${HOME_DIR}"
+echo "[bashrc_symlink] Source .bashrc: ${SRC}"
+echo "[bashrc_symlink] Destination link: ${DEST}"
+echo
+
+# Ensure the source exists (warn but continue)
+if [[ ! -e "${SRC}" ]]; then
+    echo "[bashrc_symlink][WARN] Source file does not exist – the link will still be created."
 fi
 
-# Create the symlink.
-ln -s "$SOURCE_BASHRC" "$DEST_BASHRC"
-echo "Symlink created: $DEST_BASHRC -> $SOURCE_BASHRC"
+# Remove existing destination (file, dir or symlink)
+if [[ -e "${DEST}" || -L "${DEST}" ]]; then
+    echo "[bashrc_symlink] Removing existing ${DEST}"
+    rm -rf -- "${DEST}"
+fi
+
+# Create the symlink
+echo "[bashrc_symlink] Creating symlink ${DEST} -> ${SRC}"
+ln -s -- "${SRC}" "${DEST}"
+
+echo "[bashrc_symlink] Result:"
+ls -l -- "${DEST}"
+echo "[bashrc_symlink] Done."
